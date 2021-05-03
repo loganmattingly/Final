@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Instrument Store</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="store">
+    <button v-on:click="emptyCart" class="right"> Count: {{cart.length}}</button>
+ 
+  <div>
+    <button v-on:click="popUp2">Add New Instrument</button>
+    <div class="popUp2"v-bind:class="{hide:selected==false,popUp2:selected==true}">
+      <div>
+      <img src="https://www.lifepng.com/wp-content/uploads/2020/03/Black-X-Letter-PNG-Clipart.png" v-on:click="popUp2" class="exit"/>
+        <h4>Add New Instrument</h4>
+   <input type="text" placeholder="Instrument Name" v-model="name">
+       <input type="text" placeholder="Instrument Type" v-model="type">
+      <label for="new" >Choose a brand:</label>
+
+<select name="brand" id="brand" v-model="brand" >
+  <option value="Maton">Maton</option>
+  <option value="Yamaha">Yahama</option>
+  <option value="Fender">Fender</option>
+</select>
+       <input type="text" placeholder="Instrument Price" v-model="price">
+       <input type="text" placeholder="Enter image url" v-model="img">
+       {{mess}}
+      <button v-on:click="newInstrument">Add New Instrument</button>
+        
+      </div>
+    </div>
+  </div>
+  <div v-if="instrument.length==0" >Store is Empty</div>
+  <div class="product" v-bind:class="item.brand" v-for="(item,index) in instrument" v-on:click="popUp(index)">
+    
+      <div> <img v-bind:src="item.img"></img> </div>
+        {{item.name}}
+      <button v-on:click="submit(item,index);popUp(index)"> Add To Cart</button>
+  
+      
+       <div v-bind:class="{hide:item.selected==false,popUp:item.selected==true}">
+         <div >
+          <img v-bind:src="item.img">
+          Name: {{item.name}}
+          <br>
+          Type: {{item.type}}
+          <br>
+          Brand: {{item.brand}}
+          <br>
+          Price: {{item.price}}
+          <br>
+          <button v-on:click="submit(item,index);popUp(index)"> Add To Cart</button>
+          </img>
+</d>
+      </div>
+    </div>
+
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

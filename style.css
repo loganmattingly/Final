@@ -1,0 +1,120 @@
+*{
+  margin:0;
+}
+
+html,body{
+  height:100%;
+}
+
+#store{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.popUp{
+  height:100%;
+  width:100%;
+  background-color:rgba(193, 193, 193, 0.50);
+  position:absolute;
+  top:0;
+  left:0;
+  display:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+ 
+  
+}
+
+.popUp div{
+  height:250px;
+  width:250px;
+ background-color: lightgrey;
+  color:black;
+   display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center
+}
+.popUp2{
+  height:100%;
+  width:100%;
+  background-color:rgba(193, 193, 193, 0.50);
+  position:absolute;
+  top:0;
+  left:0;
+  display:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+ 
+  
+}
+
+.popUp2 div{
+  height:250px;
+  width:250px;
+ background-color: lightgrey;
+  color:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.product{
+  height:200px;
+  width:200px;
+  border-radius:10px;
+  border:2px solid black;
+  box-shadow:2px 2px 2px black;
+  margin-top:10px;
+  margin-left:8px;
+  display:flex;
+  flex-direction:column;
+/*   justify-content:center; */
+  align-items:center;
+  
+}
+
+.product img{
+  height:115px;
+}
+
+.Fender:hover{
+  background-color:red;
+  color:white
+}
+.Maton:hover{
+  background-color:blue;
+  color:white
+}
+.Yamaha:hover{
+  background-color:green;
+  color:white
+}
+  
+button{
+  height:35px;
+  width:90px;
+  background-color:darkorange;
+  color:white;
+  cursor:pointer;
+  
+}
+.hide{
+  display:none;
+}
+
+.right{
+position: absolute;
+  right: 0px;
+}
+.exit{
+width:20px;
+height:20px;
+  margin-top:5px;
+  margin-left:200px
+}
